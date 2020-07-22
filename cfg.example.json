@@ -1,5 +1,12 @@
 {
     "debug": false,
+
+    "equipment_cabinet_num":1,
+    "element": 1,
+    "machine_type": "",
+    "ip": "127.0.0.1",
+    "project_belongs": "xx",
+
     "extend": "./extend.json",
     "heartbeat": {
         "enabled": true,

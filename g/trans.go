@@ -76,6 +76,21 @@ func SendToTransfer(metrics []*MetricValue) {
 	if len(metrics) == 0 {
 		return
 	}
+
+	equ := Config().EquipmentCabinetNum
+	ele := Config().Element
+	mat := Config().MachineType
+	ip := Config().Ip
+	prt := Config().ProjectBelongs
+
+	for k,_ := range metrics {
+		if len(metrics[k].Tags) == 0 {
+			metrics[k].Tags = fmt.Sprintf("%v,%v,%v,%v,%v",equ,ele,mat,ip,prt)
+		}else{
+			metrics[k].Tags = fmt.Sprintf("%v,%v,%v,%v,%v,%v",metrics[k].Tags,equ,ele,mat,ip,prt)
+		}
+	}
+
 	Log.Debugf("[trans.go] => <Total=%d> %v", len(metrics), metrics[0])
 
 	var resp TransferResponse

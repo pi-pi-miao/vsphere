@@ -1,0 +1,3 @@
+2020-07-22 19:23:17[36m [INFO] [0m[cfg.go] read global config file: cfg.json successfully!
+2020-07-22 19:23:17[36m [INFO] [0m[cfg.go] read extend config file: ./extend.json successfully!
+2020-07-22 19:23:18[33m [WARN] [0m[main.go] the vc https://1.1.1.1/sdk connection error: POST "/sdk": 403 Forbidden

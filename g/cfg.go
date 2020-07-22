@@ -41,6 +41,13 @@ type VsphereConfig struct {
 //GlobalConfig global configuration
 type GlobalConfig struct {
 	Debug     bool             `json:"debug"`
+
+	EquipmentCabinetNum int  `json:"equipment_cabinet_num"`
+	Element   int              `json:"element"`
+	MachineType string        `json:"machine_type"`
+	Ip        string	       `json:"ip"`
+	ProjectBelongs string     `json:"project_belongs"`
+
 	Extend    string           `json:"extend"`
 	Heartbeat *HeartbeatConfig `json:"heartbeat"`
 	Transfer  *TransferConfig  `json:"transfer"`
